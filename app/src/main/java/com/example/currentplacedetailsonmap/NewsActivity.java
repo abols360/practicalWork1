@@ -67,8 +67,10 @@ public class NewsActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     //List<Post> posts = response.body();
                     // Handle the successful response, e.g., update UI
-                    Log.e("er", response.body().toString());
+                    Log.e("er11", response.body().toString());
                     items.clear();
+                    List x = response.body();
+                   // Log.e("er22", response.body());
                     items.addAll(response.body() != null ?  response.body() : Collections.emptyList());
                     adapter.notifyDataSetChanged();
 
